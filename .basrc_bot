@@ -1,0 +1,11 @@
+# Алиасы для управления ботом
+alias bot-start="bash ~/bot_service.sh"
+alias bot-stop="pkill -f 'python multiplayer_game1_bot.py' && tmux kill-session -t game_bot 2>/dev/null"
+alias bot-status="bash ~/bot_control.sh"
+alias bot-logs="tail -f bot.log"
+alias bot-restart="bot-stop && sleep 2 && bot-start"
+alias bot-run="python multiplayer_game1_bot.py"
+
+# Информация при входе
+echo "🤖 Игровой бот multiplayer_game1_bot.py"
+echo "📋 Доступные команды: bot-start, bot-stop, bot-status, bot-logs"
